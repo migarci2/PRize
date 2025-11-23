@@ -1,0 +1,222 @@
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	padding: var(--spacing-lg) 0;
+	border-bottom: 1px solid var(--color-border-light);
+	backdrop-filter: blur(10px);
+	background: rgba(10, 10, 15, 0.8);
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-md);
+	text-decoration: none;
+	transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+	opacity: 0.8;
+}
+
+.logoIcon {
+	width: 36px;
+	height: 29px;
+	color: var(--color-primary-light);
+}
+
+.logoText {
+	font-size: 1.5rem;
+	font-weight: 800;
+	background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.main {
+	flex: 1;
+	padding: var(--spacing-2xl) 0;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	gap: var(--spacing-2xl);
+}
+
+.formSection {
+	display: flex;
+	flex-direction: column;
+}
+
+.backLink {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+	color: var(--color-text-muted);
+	font-size: 0.875rem;
+	margin-bottom: var(--spacing-lg);
+	transition: color var(--transition-fast);
+	text-decoration: none;
+	width: fit-content;
+}
+
+.backLink:hover {
+	color: var(--color-primary-light);
+}
+
+.title {
+	margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+	font-size: 1.125rem;
+	color: var(--color-text-secondary);
+	margin-bottom: var(--spacing-xl);
+}
+
+.formCard {
+	background: var(--color-bg-card);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	padding: var(--spacing-2xl);
+	backdrop-filter: blur(10px);
+	box-shadow: var(--shadow-md);
+}
+
+.connectWallet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacing-2xl);
+	text-align: center;
+	background: var(--color-bg-card);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	backdrop-filter: blur(10px);
+}
+
+.walletIcon {
+	width: 64px;
+	height: 64px;
+	color: var(--color-primary-light);
+	margin-bottom: var(--spacing-lg);
+}
+
+.connectWallet h3 {
+	margin-bottom: var(--spacing-sm);
+}
+
+.connectWallet p {
+	color: var(--color-text-muted);
+	margin-bottom: var(--spacing-xl);
+}
+
+.loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacing-2xl);
+	gap: var(--spacing-md);
+}
+
+.infoSection {
+	position: sticky;
+	top: calc(var(--spacing-lg) * 2 + 60px);
+	height: fit-content;
+}
+
+.steps {
+	list-style: none;
+	counter-reset: step-counter;
+	padding: 0;
+	margin: var(--spacing-lg) 0 0;
+}
+
+.steps li {
+	counter-increment: step-counter;
+	position: relative;
+	padding-left: var(--spacing-2xl);
+	margin-bottom: var(--spacing-lg);
+}
+
+.steps li:last-child {
+	margin-bottom: 0;
+}
+
+.steps li::before {
+	content: counter(step-counter);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 0.875rem;
+}
+
+.steps li strong {
+	display: block;
+	color: var(--color-text-primary);
+	margin-bottom: var(--spacing-xs);
+}
+
+.steps li p {
+	font-size: 0.875rem;
+	color: var(--color-text-muted);
+	margin: 0;
+}
+
+.benefits {
+	list-style: none;
+	padding: 0;
+	margin: var(--spacing-lg) 0 0;
+}
+
+.benefits li {
+	display: flex;
+	align-items: start;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-md);
+	font-size: 0.875rem;
+	color: var(--color-text-secondary);
+}
+
+.benefits li:last-child {
+	margin-bottom: 0;
+}
+
+.benefits li svg {
+	flex-shrink: 0;
+	color: var(--color-success);
+	margin-top: 2px;
+}
+
+@media (max-width: 968px) {
+	.content {
+		grid-template-columns: 1fr;
+	}
+
+	.infoSection {
+		position: static;
+	}
+}

@@ -1,0 +1,57 @@
+.walletButtonWrapper {
+	/* Custom styling can be added here if needed */
+}
+
+/* Override wallet adapter styles */
+.walletButtonWrapper :global(.wallet-adapter-button) {
+	background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)) !important;
+	border-radius: var(--radius-md) !important;
+	font-family: var(--font-sans) !important;
+	font-weight: 600 !important;
+	padding: var(--spacing-sm) var(--spacing-lg) !important;
+	transition: all var(--transition-base) !important;
+	box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-button:hover) {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-button:disabled) {
+	opacity: 0.5 !important;
+	cursor: not-allowed !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal-wrapper) {
+	background: rgba(0, 0, 0, 0.8) !important;
+	backdrop-filter: blur(8px) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal) {
+	background: var(--color-bg-secondary) !important;
+	border: 1px solid var(--color-border) !important;
+	border-radius: var(--radius-lg) !important;
+	box-shadow: var(--shadow-lg) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal-title) {
+	color: var(--color-text-primary) !important;
+	font-family: var(--font-sans) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal-list) {
+	margin: 0 !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal-list .wallet-adapter-button) {
+	background: var(--color-bg-tertiary) !important;
+	border: 1px solid var(--color-border) !important;
+	color: var(--color-text-primary) !important;
+}
+
+.walletButtonWrapper :global(.wallet-adapter-modal-list .wallet-adapter-button:hover) {
+	background: var(--color-bg-hover) !important;
+	border-color: var(--color-primary) !important;
+	transform: none !important;
+}
