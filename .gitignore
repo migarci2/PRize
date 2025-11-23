@@ -1,0 +1,38 @@
+# Build artifacts
+target/
+.anchor/
+.DS_Store
+
+# IDL and types
+*.so
+*.node
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Test ledger
+test-ledger/
+.cproject
+.idea
+.vscode/
+
+# Environment
+.env
+.env.local
+*.key
+*.keypair
+
+# Frontend
+app/.next/
+app/out/
+app/dist/
+app/build/
+app/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
